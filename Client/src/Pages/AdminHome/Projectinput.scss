@@ -1,0 +1,124 @@
+// Custom styles for the category and technologies select elements
+.select-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.select-list__column {
+  width: 50%;
+}
+
+.select-list__label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.select-list__select {
+  appearance: none;
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 4px;
+  color: #343a40;
+  font-size: 16px;
+  height: 40px;
+  padding: 8px 12px;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+}
+
+.select-list__options {
+  display: none;
+  flex-direction: column;
+  margin-top: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.select-list__option {
+  background-color: #f8f9fa;
+  color: #343a40;
+  cursor: pointer;
+  padding: 8px 12px;
+
+  &:hover {
+    background-color: #e9ecef;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #007bff;
+    color: #fff;
+  }
+}
+
+.select-list__selected {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.select-list__selected-item {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px;
+  padding: 8px 12px;
+}
+
+.select-list__add {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 8px 0;
+  padding: 8px 12px;
+
+  &:hover {
+    background-color: #0069d9;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #005cbf;
+  }
+}
+
+.select-list__remove {
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px;
+  padding: 8px 12px;
+
+  &:hover {
+    background-color: #c82333;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #bd2130;
+  }
+}

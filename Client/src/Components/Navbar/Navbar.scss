@@ -1,0 +1,102 @@
+.app__navbar{
+  width: 100%;
+  background-color: rgba(255,255,255,0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  -webkit-backdrop-filter: blur(3px);
+}
+.lead{
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.app__content__center{
+  list-style: none;
+  display: flex;
+  flex : 1;
+  justify-content:center;
+  align-items: center;
+}
+
+.app__navbar__links{
+  margin: 0 1rem ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  color: var(--gray-color);
+}
+
+.app__navbar__links:hover{
+ color: var(--secondary-color);
+}
+.active {
+  color: var(--secondary-color);
+}
+
+
+.app__navbar__links:hover > div{
+  background-color: var(--secondary-color);
+  margin-bottom: 5px;
+  height: 5px;
+  width:  5px;
+  border-radius: 50%;
+  
+}
+.app__navbar__links > div{
+  background-color: transparent;
+  margin-bottom: 5px;
+  height: 5px;
+  width:  5px;
+  border-radius: 50%;
+  
+
+}
+
+.app__navbar__links a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  color: inherit;
+}
+
+/*  */
+.mobile__navbar{
+  cursor: pointer;
+  margin-right: 20px;
+}
+ .menu{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  width: 70%;
+  box-shadow: 0 0 20px rgba(168, 168, 168, .3);
+  background-color: var(--white-color);
+  transition: all 500ms ease;
+  height: 100vh;
+ }
+ .menu__show{
+  right: 0;
+  transition: all 500ms ease;
+ }
+ .menu__button{
+  cursor: pointer;
+ }
+
+ .menu li{
+  margin: .5rem 2rem;
+ }
+ .cancel-button{
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  transition: all 300ms ease;
+ }

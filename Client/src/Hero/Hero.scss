@@ -1,0 +1,126 @@
+// Variables
+$white : #fff;
+$red: #E49393;
+$light-gray: #D8D8D8;
+$primary-color: #408E91;
+$dark-gray: #245953;
+$yellow : #f5d72d;
+$dark-yellow :  #bea307;
+
+// Hero section
+.hero {
+  min-height: 100vh;
+  // background-color: $red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    background-image: linear-gradient(rgba(255, 255, 255, 0), $light-gray);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: circle-zoom-out 2s ease-in-out forwards;
+  }
+
+  @keyframes circle-zoom-out {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+      border-radius: 0%;
+    }
+
+    100% {
+      transform: scale(2);
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .hero__content {
+    max-width: 600px;
+    margin-right: 100px;
+    position: relative;
+    z-index: 2;
+    animation: fade-in 1s forwards;
+
+    @media only screen and (max-width: 1024px) {
+      margin-right: 50px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .hero__title {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: $dark-gray;
+      background: linear-gradient(to right, $red, $primary-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 3rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    .hero__subtitle {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: $dark-gray;
+      margin-bottom: 50px;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .hero__cta-btn {
+      background-color: $yellow;
+      color: $white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px $dark-yellow;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $dark-yellow;
+        box-shadow: 0;
+      }
+    }
+  }
+}

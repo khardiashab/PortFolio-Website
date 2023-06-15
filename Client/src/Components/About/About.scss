@@ -1,0 +1,29 @@
+.about-section{
+  min-height: 100vh;
+  padding: 4rem 2rem;
+
+  .bg-effect{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div{
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      // border: 2px solid black;
+      background-color: rgba(241, 192, 55, .09);
+      
+    }
+  }
+
+  .btn-outline-primary:hover{
+    color: white;
+  }
+
+}

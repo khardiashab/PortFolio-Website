@@ -1,0 +1,26 @@
+.admin_panel{
+  height: 100vh;
+}
+.side_bar {
+  
+  flex: 1;
+  border-right: 1px solid rgba(155, 153, 153, .75);
+
+  .nalink{
+    padding: 10px 0;
+  }
+  .admin__navLink {
+    font-size: 1.2rem;
+    padding: rem 3rem;
+    padding-left: 3rem;
+    color:rgba(68, 67, 67, 0.75);
+    width: 100%;
+    text-decoration: none;
+  }
+  // .active {
+  //   background-color : rgb(92, 0, 128);
+  //   color: white;
+  // }
+
+
+}
